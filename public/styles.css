@@ -97,7 +97,7 @@ body {
 }
 
 .hero-section h1 {
-    font-size: 3.5rem;
+    font-size: 4.5rem; /* Incrementar el tamaño del título */
     margin-bottom: 15px;
 }
 
@@ -108,8 +108,22 @@ body {
 }
 
 .main-cta-btn {
-    padding: 20px 40px;
-    font-size: 1.2rem;
+    background-color: #25D366; /* Color verde de WhatsApp */
+    color: #ffffff; /* Texto blanco */
+    font-size: 1.2rem; /* Mantener el tamaño del texto */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaciado entre el logo y el texto */
+    border: none;
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.5), 0 0 30px rgba(37, 211, 102, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.main-cta-btn:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.7), 0 0 40px rgba(37, 211, 102, 0.5);
 }
 
 /* --- Feature Section --- */
