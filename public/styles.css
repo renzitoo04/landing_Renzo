@@ -1,0 +1,201 @@
+/* Variables para colores */
+:root {
+    --color-black: #000000;
+    --color-neon-green: #00ff62e1;
+    --color-neon-purple: #8A2BE2; /* Un púrpura vibrante para el acento */
+    --color-text-light: #f0f0f0;
+}
+
+/* Estilo general y fondo oscuro */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-black);
+    color: var(--color-text-light);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Fondo cyber-tech (Simulado con un gradiente muy sutil) */
+    background-image: radial-gradient(circle at center, rgba(138, 43, 226, 0.05) 0%, rgba(0, 0, 0, 1) 70%), 
+                      repeating-linear-gradient(45deg, rgba(0, 255, 99, 0.05), rgba(0, 255, 99, 0.05) 1px, transparent 1px, transparent 10px);
+    background-size: 100% 100%, 100% 100%;
+}
+
+/* Estilo de texto neón */
+.neon-glow-green {
+    color: var(--color-neon-green);
+    text-shadow: 0 0 5px var(--color-neon-green), 0 0 15px var(--color-neon-green), 0 0 30px var(--color-neon-green);
+}
+
+/* Estilos de Botón "glowing-btn" (CTA principal) */
+.glowing-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid var(--color-neon-green);
+    background-color: transparent;
+    color: var(--color-neon-green);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 255, 99, 0.5), 0 0 20px rgba(0, 255, 99, 0.2);
+    transition: all 0.3s ease;
+}
+
+.glowing-btn:hover {
+    background-color: var(--color-neon-green);
+    color: var(--color-black);
+    box-shadow: 0 0 15px var(--color-neon-green), 0 0 30px var(--color-neon-green);
+}
+
+/* --- Navbar (Barra superior) --- */
+.navbar {
+    display: flex;
+    justify-content: flex-start; /* MODIFICADO: Alinea a la izquierda ya que el botón derecho fue eliminado */
+    align-items: center;
+    padding: 15px 5%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid var(--color-neon-purple); /* Toque cyber */
+}
+
+.logo-text { display: none; } /* antiguo texto oculto por si queda referencia */
+
+.logo-img {
+    height: 70px; /* Aumentar tamaño del logo */
+    max-height: 80px; /* Ajustar límite máximo */
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0,255,99,0.12));
+}
+
+.btn-logo {
+    height: 37px !important; /* Forzar el tamaño del logo */
+    width: auto; /* Mantener la proporción del logo */
+    vertical-align: middle; /* Alinear con el texto */
+    margin-right: 12px; /* Espaciado entre el logo y el texto */
+    position: relative; /* Permitir ajustes finos */
+    top: -2px; /* Subir ligeramente el logo */
+}
+
+/* Ajuste de alineación si hace falta */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    text-align: center;
+    padding: 100px 5%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.subheadline {
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+    margin-bottom: 40px;
+}
+
+.main-cta-btn {
+    padding: 20px 40px;
+    font-size: 1.2rem;
+}
+
+/* --- Feature Section --- */
+.features-section {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: #0d0d0d;
+    border-top: 1px solid var(--color-neon-purple);
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--color-text-light);
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--color-neon-green);
+    box-shadow: 0 0 8px var(--color-neon-green);
+    margin: 10px auto 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 255, 99, 0.2);
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.1);
+}
+
+.neon-check {
+    color: var(--color-neon-green);
+    font-size: 1.5rem;
+    margin-right: 15px;
+    text-shadow: 0 0 5px var(--color-neon-green);
+    font-weight: bold;
+}
+
+.feature-item p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* --- Mid CTA Section --- */
+.mid-cta-section {
+    text-align: center;
+    padding: 80px 5%;
+}
+
+.mid-cta-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+/* --- Lead Form Section (Eliminado del HTML, se deja por si acaso) --- */
+/* Esta sección fue eliminada del HTML. Si se quisiera restaurar, se necesitaría su CSS. */
+
+
+/* --- Footer --- */
+.footer {
+    padding: 30px 5%;
+    text-align: center;
+    background-color: #050505;
+    border-top: 1px solid rgba(0, 255, 99, 0.2);
+    font-size: 0.9rem;
+}
+
+.footer-tagline {
+    color: var(--color-neon-purple);
+    font-style: italic;
+    margin-top: 5px;
+}
