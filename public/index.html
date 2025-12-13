@@ -5,7 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Pages </title>
     <link rel="stylesheet" href="./styles.css"> <link rel="icon" href="favicon.ico" type="image/x-icon">
-    </head>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1618332022468743');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1618332022468743&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
 <body>
     <header class="navbar">
         <div class="logo">
@@ -19,7 +37,7 @@
         <section class="hero-section">
             <h1 class="neon-glow-green">LANDING PAGES </h1>
             <p class="subheadline">Más mensajes + más cierres + seguimiento inteligente</p>
-            <a href="https://wa.me/+5491172485791" class="main-cta-btn glowing-btn whatsapp-icon" target="_blank">
+            <a href="https://wa.me/+5491172485791" class="main-cta-btn glowing-btn whatsapp-icon" target="_blank" id="whatsapp-btn">
                 <img src="./assets/logo_whatsapp.png" alt="WhatsApp Logo" class="btn-logo">
                 <span>HABLÁ CON UN ESPECIALISTA</span>
             </a>
@@ -60,7 +78,20 @@
 
     <footer class="footer">
         <p>© 2025 Landing Flash - Todos los derechos reservados</p>
-        <p class="footer-tagline">“Especialistas en Cas1nos Online”</p>
+        <p class="footer-tagline">"Especialistas en Cas1nos Online"</p>
     </footer>
+
+    <script>
+        // Rastreo de clic en botón de WhatsApp
+        document.getElementById('whatsapp-btn').addEventListener('click', function() {
+            // Enviar evento "Contact" a Facebook Pixel
+            fbq('track', 'Contact', {
+                content_name: 'WhatsApp Click',
+                content_category: 'Lead Generation'
+            });
+
+            console.log('Evento Contact enviado a Facebook Pixel');
+        });
+    </script>
 </body>
 </html>
